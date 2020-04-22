@@ -1,3 +1,9 @@
+import NavMain from '../components/nav-main.js';
+
 export default function Index() {
-  return ;
+  return (
+    <div>
+      <NavMain />
+    </div>
+  );
 }
