@@ -1,10 +1,11 @@
 import NavMain from '../components/nav-main.js';
-import ZoomCard from '../components/zoom-card.js';
+import BingoCard from '../components/bingo-card.js';
 
 export default function Index() {
   return (
     <div>
       <NavMain />
+      <BingoCard />
     </div>
   );
 }

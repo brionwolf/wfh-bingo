@@ -2,17 +2,16 @@ import React from 'react';
 import {
   Card,
   CardBody,
-  CardTitle,
+  CardText,
   Button
 } from 'reactstrap';
 
 export default (props) => {
   return (
-    <div>
-      <Card>
+    <div className={props.className}>
+      <Card className="text-center">
         <CardBody>
-          <CardTitle>{props.title}</CardTitle>
-          <Button>{props.button || "Select"}</Button>
+          <CardText>{props.title}</CardText>
         </CardBody>
       </Card>
     </div>
