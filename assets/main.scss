@@ -1,5 +1,9 @@
-$body-bg: #000000;
-$body-color: #ffffff;
 
-// Bootstrap and its default variables
-@import "node_modules/bootstrap/scss/bootstrap";
+@import 'reset';
+@import 'variables';
+@import 'base';
+
+@import 'nav-main';
+
+@import 'bingo-card';
+@import 'bingo-square';

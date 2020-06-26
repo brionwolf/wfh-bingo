@@ -1,0 +1,49 @@
+.bingo-square  {
+  background: $darker-gray;
+    &:hover, &:focus { background: $orange; }
+    &:active { background: $darker-orange; }
+  border-radius: .2em;
+  cursor: pointer;
+  position: relative;
+  width: 100%;
+
+  @media (prefers-color-scheme: dark) {
+    background: $darker-gray;
+  }
+
+  @media (prefers-color-scheme: light) {
+    background: $lighter-gray;
+    &:hover, &:focus { color: $white; }
+    &:active { color: $white; }
+  }
+
+  &:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+  }
+
+  .bingo-square-body {
+    overflow: hidden;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+
+    .bingo-square-content {
+      position: absolute;
+        top: 50%;
+        left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      width: 80%;
+      p {
+        font-family: $serif;
+        font-size: .5rem;
+        @media (min-width: $breakpoint-sm) { font-size: 0.8rem; }
+
+        font-weight: 700;
+        hyphens: manual;
+      }
+    }
+  }
+}

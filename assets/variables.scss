@@ -1,0 +1,39 @@
+/* Global Styles */
+
+/* Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700&display=swap');
+$sans-serif:  'Lato', sans-serif;
+$serif:  'Roboto Slab', serif;
+
+/* Colors */
+
+$dark-blue: #0C63CE;
+$blue: #2D8CFF;
+$light-blue: #2681F2;
+
+$darker-orange: #C2571A;
+$dark-orange: #DA621E;
+$orange: #F26D21;
+$light-orange: #FFD3AC;
+$ligher-orange: #FFEBDA;
+
+$dark-red: #710C1A;
+$light-red: #E21833;
+$light-red: #EB5D70;
+
+$black: #232333;
+$darker-gray: #4A494F;
+$dark-gray: #BABACC;
+$gray: #747487;
+$light-gray: #E4E4ED;
+$lighter-gray: #F6F7F9;
+$white: #FFFFFF;
+
+/* breakpoints */
+
+$breakpoint-sm: 540px;
+$breakpoint-md: 720px;
+$breakpoint-lg: 960px;
+$breakpoint-xl: 1140px;
