@@ -1,140 +1,138 @@
-{
-  "bingo": [
-    {
-      "pk": 1,
-      "text": "\"pivot\""
-    },
-    {
-      "pk": 2,
-      "text": "\"ping\""
-    },
-    {
-      "pk": 3,
-      "text": "\"Can you see my screen?\""
-    },
-    {
-      "pk": 4,
-      "text": "\"Nice background!\""
-    },
-    {
-      "pk": 5,
-      "text": "Mentions Tigerking"
-    },
-    {
-      "pk": 6,
-      "text": "Take a bite of food"
-    },
-    {
-      "pk": 7,
-      "text": "Sipping a drink"
-    },
-    {
-      "pk": 8,
-      "text": "Has visible bed head"
-    },
-    {
-      "pk": 9,
-      "text": "Yawns"
-    },
-    {
-      "pk": 10,
-      "text": "Virtual background matches outfit"
-    },
-    {
-      "pk": 11,
-      "text": "Disappears into the virtual background"
-    },
-    {
-      "pk": 12,
-      "text": "Accidently interrupts speaker"
-    },
-    {
-      "pk": 13,
-      "text": "Touches their face"
-    },
-    {
-      "pk": 14,
-      "text": "Joins call late"
-    },
-    {
-      "pk": 15,
-      "text": "Dog or other pet makes noise"
-    },
-    {
-      "pk": 16,
-      "text": "Siren"
-    },
-    {
-      "pk": 17,
-      "text": "Contruction noises"
-    },
-    {
-      "pk": 18,
-      "text": "Truck backing up"
-    },
-    {
-      "pk": 19,
-      "text": "Phone/Alarm rings"
-    },
-    {
-      "pk": 20,
-      "text": "Unmuted Coughing/ Sneezing"
-    },
-    {
-      "pk": 21,
-      "text": "Someone audibly typing"
-    },
-    {
-      "pk": 22,
-      "text": "Awkward silence"
-    },
-    {
-      "pk": 23,
-      "text": "Video freezes"
-    },
-    {
-      "pk": 24,
-      "text": "Audio cuts off"
-    },
-    {
-      "pk": 25,
-      "text": "Someone knocked off call"
-    },
-    {
-      "pk": 26,
-      "text": "Muted while talking"
-    },
-    {
-      "pk": 27,
-      "text": "Bad lighting"
-    },
-    {
-      "pk": 28,
-      "text": "Make a commuting joke"
-    },
-    {
-      "pk": 29,
-      "text": "Any pre-meeting small talk"
-    },
-    {
-      "pk": 30,
-      "text": "Person or pet runs into view"
-    },
-    {
-      "pk": 31,
-      "text": "\"Let's stay on for a minute?\""
-    },
-    {
-      "pk": 32,
-      "text": "yawn becomes contagious"
-    },
-    {
-      "pk": 33,
-      "text": "Audible Notification"
-    },
-    {
-      "pk": 34,
-      "text": "\"Sync up\""
-    }
-  ]
-}
+[
+  {
+    "pk": 1,
+    "text": "\"pivot\""
+  },
+  {
+    "pk": 2,
+    "text": "\"ping\""
+  },
+  {
+    "pk": 3,
+    "text": "\"Can you see my screen?\""
+  },
+  {
+    "pk": 4,
+    "text": "\"Nice background!\""
+  },
+  {
+    "pk": 5,
+    "text": "Mentions Tigerking"
+  },
+  {
+    "pk": 6,
+    "text": "Take a bite of food"
+  },
+  {
+    "pk": 7,
+    "text": "Sipping a drink"
+  },
+  {
+    "pk": 8,
+    "text": "Has visible bed head"
+  },
+  {
+    "pk": 9,
+    "text": "Yawns"
+  },
+  {
+    "pk": 10,
+    "text": "Virtual background matches outfit"
+  },
+  {
+    "pk": 11,
+    "text": "Disappears into the virtual background"
+  },
+  {
+    "pk": 12,
+    "text": "Accidently interrupts speaker"
+  },
+  {
+    "pk": 13,
+    "text": "Touches their face"
+  },
+  {
+    "pk": 14,
+    "text": "Joins call late"
+  },
+  {
+    "pk": 15,
+    "text": "Dog or other pet makes noise"
+  },
+  {
+    "pk": 16,
+    "text": "Siren"
+  },
+  {
+    "pk": 17,
+    "text": "Contruction noises"
+  },
+  {
+    "pk": 18,
+    "text": "Truck backing up"
+  },
+  {
+    "pk": 19,
+    "text": "Phone/Alarm rings"
+  },
+  {
+    "pk": 20,
+    "text": "Unmuted Coughing/ Sneezing"
+  },
+  {
+    "pk": 21,
+    "text": "Someone audibly typing"
+  },
+  {
+    "pk": 22,
+    "text": "Awkward silence"
+  },
+  {
+    "pk": 23,
+    "text": "Video freezes"
+  },
+  {
+    "pk": 24,
+    "text": "Audio cuts off"
+  },
+  {
+    "pk": 25,
+    "text": "Someone knocked off call"
+  },
+  {
+    "pk": 26,
+    "text": "Muted while talking"
+  },
+  {
+    "pk": 27,
+    "text": "Bad lighting"
+  },
+  {
+    "pk": 28,
+    "text": "Make a commuting joke"
+  },
+  {
+    "pk": 29,
+    "text": "Any pre-meeting small talk"
+  },
+  {
+    "pk": 30,
+    "text": "Person or pet runs into view"
+  },
+  {
+    "pk": 31,
+    "text": "\"Let's stay on for a minute?\""
+  },
+  {
+    "pk": 32,
+    "text": "yawn becomes contagious"
+  },
+  {
+    "pk": 33,
+    "text": "Audible Notification"
+  },
+  {
+    "pk": 34,
+    "text": "\"Sync up\""
+  }
+]

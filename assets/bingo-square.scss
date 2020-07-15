@@ -17,6 +17,12 @@
     &:active { color: $white; }
   }
 
+  &[aria-pressed="true"] {
+    background: $orange;
+    &:hover, &:focus { background: $dark-orange; }
+    &:active { background: $darker-orange; }
+  }
+
   &:after {
     content: "";
     display: block;
