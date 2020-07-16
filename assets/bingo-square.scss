@@ -42,12 +42,13 @@
       transform: translate(-50%, -50%);
       text-align: center;
       width: 80%;
+
       p {
         font-family: $serif;
-        font-size: .5rem;
+        font-size: 0.5rem;
         @media (min-width: $breakpoint-sm) { font-size: 0.8rem; }
 
-        font-weight: 700;
+        font-weight: $weight-bold;
         hyphens: manual;
       }
     }

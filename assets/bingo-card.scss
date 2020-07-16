@@ -1,13 +1,5 @@
 /*  Bingo Card */
 
-.bingo-card-gutter {
-  padding: 20px 20px 0;
-
-  @media (min-width: $breakpoint-lg) {
-    padding: 1vh 0 0;
-  }
-}
-
 .bingo-card {
   display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -15,6 +7,7 @@
     column-gap: 1px;
     row-gap: 1px;
   margin: 0 auto;
-  width: 100%;
-    max-width: 90vh;
+  width: calc(100% - 40px);
+    min-width: 280px;
+    max-width: calc(80vh - 40px);
 }
