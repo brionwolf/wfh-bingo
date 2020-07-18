@@ -1,7 +1,7 @@
 import React from 'react';
 import BingoSquare from '../components/bingo-square.js';
 
-export default (props) => {
+export default function BingoCard(props) {
 
   let squareContent = props.data;
 

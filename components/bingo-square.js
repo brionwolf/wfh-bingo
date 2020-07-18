@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default (props) => {
+export default function BingoSquare(props) {
   let handleClick = (e) => {
     e.preventDefault();
     let self = e.currentTarget;
@@ -9,12 +9,12 @@ export default (props) => {
   }
 
   return (
-    <div className="bingo-square" onClick={handleClick} role="button" aria-pressed="false">
+    <a className="bingo-square" href="#" onClick={handleClick} role="button" aria-pressed="false">
       <div className="bingo-square-body">
         <div className="bingo-square-content">
           <p>{props.text}</p>
         </div>
       </div>
-    </div>
+    </a>
   );
 };

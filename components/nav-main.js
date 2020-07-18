@@ -4,11 +4,20 @@ import { faTh, faTimesCircle } from '@fortawesome/free-solid-svg-icons'
 
 const newCard = <FontAwesomeIcon icon={faTh} />
 
-
-
-export default (props) => {
+export default function NavMain(props) {
   const [isOpen, setIsOpen] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
+
+  const resetBoard = (e) => {
+    e.preventDefault();
+    props.passResetBoard();
+  }
+
+  const newBoard = (e) => {
+    e.preventDefault();
+    props.passNewBoard();
+  }
+
   return (
     <div className="main-nav-gutter">
       <div className="main-nav">
@@ -16,11 +25,11 @@ export default (props) => {
           <h1 className="brand"><span title="Work From Home" aria-label="Work From Home (WFH)">WFH</span> Bingo</h1>
         </div>
         <div className="right-side-nav">
-          <a className="reset" href="#">
+          <a className="reset" href="#" onClick={resetBoard}>
             <FontAwesomeIcon icon={faTimesCircle} />
             <span>&nbsp; Reset</span>
           </a>
-          <a className="button" href="#">
+          <a className="button" href="#" onClick={newBoard}>
             <FontAwesomeIcon icon={faTh} />
             <span>&nbsp; New Card</span>
           </a>

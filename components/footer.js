@@ -3,13 +3,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGlobe } from '@fortawesome/free-solid-svg-icons'
 import { faGithub, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons'
 
-export default (props) => {
+export default function Footer(props) {
   return (
     <div className="footer">
       <p className="smaller">Newton developed <a href="https://en.wikipedia.org/wiki/History_of_calculus" target="_blank">Calculus</a>, Shakespear wrote <a href="https://en.wikipedia.org/wiki/King_Lear" target="_blank">King Lear</a>.</p>
       <p className="smaller">I made a react powered bingoCard...</p>
       <div className="footer-links">
-        <a href="https://github.com/brionwolf">
+        <a href="https://github.com/brionwolf" target="_blank">
           <FontAwesomeIcon icon={faGithub} />
           <span className="sr-only">brionwolf on github</span>
         </a>

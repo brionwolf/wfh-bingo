@@ -1,8 +1,9 @@
 .bingo-square  {
   background: $darker-gray;
-    &:hover, &:focus { background: $orange; }
+    &:hover { background: $orange; }
     &:active { background: $darker-orange; }
   border-radius: .2em;
+  color: $white;
   cursor: pointer;
   position: relative;
   width: 100%;
@@ -13,13 +14,13 @@
 
   @media (prefers-color-scheme: light) {
     background: $lighter-gray;
-    &:hover, &:focus { color: $white; }
+    &:hover { color: $white; }
     &:active { color: $white; }
   }
 
   &[aria-pressed="true"] {
     background: $orange;
-    &:hover, &:focus { background: $dark-orange; }
+    &:hover { background: $dark-orange; }
     &:active { background: $darker-orange; }
   }
 
