@@ -1,15 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 export default function BingoSquare(props) {
-  let handleClick = (e) => {
+
+  const [isClicked, setIsClicked] = useState(false);
+
+  const handleClick = (e) => {
     e.preventDefault();
-    let self = e.currentTarget;
-    let isPressed = self.getAttribute('aria-pressed');
-    isPressed === "true" ? self.setAttribute('aria-pressed', 'false') : self.setAttribute('aria-pressed', 'true');
+    setIsClicked(isClicked => !!isClicked ? isClicked = false : isClicked = true);
   }
 
   return (
-    <a className="bingo-square" href="#" onClick={handleClick} role="button" aria-pressed="false">
+    <a className="bingo-square" href="#" onClick={handleClick} role="button" aria-pressed={isClicked}>
       <div className="bingo-square-body">
         <div className="bingo-square-content">
           <p>{props.text}</p>
