@@ -1,11 +1,13 @@
 .bingo-square  {
   background: $darker-gray;
-    &:hover { background: $orange; }
-    &:active { background: $darker-orange; }
+    &:hover, &:focus { background: $darkest-gray; }
+    &:active { background: $orange; }
   border-radius: .2em;
   color: $white;
   cursor: pointer;
   position: relative;
+  transition: background 0.2s ease-in-out,
+              color 0.2s ease-in-out;
   width: 100%;
 
   @media (prefers-color-scheme: dark) {
@@ -14,13 +16,13 @@
 
   @media (prefers-color-scheme: light) {
     background: $lighter-gray;
-    &:hover { color: $white; }
+    &:hover, &:focus { color: $white; }
     &:active { color: $white; }
   }
 
   &[aria-pressed="true"] {
     background: $orange;
-    &:hover { background: $dark-orange; }
+    &:hover, &:focus { background: $dark-orange; }
     &:active { background: $darker-orange; }
   }
 
@@ -37,21 +39,17 @@
     width: 100%;
 
     .bingo-square-content {
+      font-family: $serif;
+      font-size: 0.5rem;
+      @media (min-width: $breakpoint-sm) { font-size: 0.8rem; }
+      font-weight: $weight-bold;
+      hyphens: manual;
       position: absolute;
         top: 50%;
         left: 50%;
       transform: translate(-50%, -50%);
       text-align: center;
       width: 80%;
-
-      p {
-        font-family: $serif;
-        font-size: 0.5rem;
-        @media (min-width: $breakpoint-sm) { font-size: 0.8rem; }
-
-        font-weight: $weight-bold;
-        hyphens: manual;
-      }
     }
   }
 }

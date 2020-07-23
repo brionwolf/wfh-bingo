@@ -15,6 +15,7 @@ export default function Index() {
       currentIndex -= 1;
       temporaryValue = array[currentIndex];
       array[currentIndex] = array[randomIndex];
+      array[currentIndex].isPressed = false;
       array[randomIndex] = temporaryValue;
     }
 
@@ -33,6 +34,12 @@ export default function Index() {
     setSquares(squares => shuffle(squares));
   }
 
+  const handleClick = (squareIndex) => {
+    const index = parseInt(squareIndex);
+    const bingoSquares = squares.slice(0);
+    return !!bingoSquares[index].isPressed ? bingoSquares[index].isPressed = false : bingoSquares[index].isPressed = true;
+  }
+
   return (
     <div>
       <Head>
@@ -40,7 +47,7 @@ export default function Index() {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <NavMain passResetBoard={handleResetBoard} passNewBoard={handleNewBoard} />
-      <BingoCard data={squares} />
+      <BingoCard data={squares} handleClick={handleClick} />
       <Footer />
     </div>
   );

@@ -3,12 +3,16 @@ import BingoSquare from '../components/bingo-square.js';
 
 export default function BingoCard(props) {
 
+  const handleClick = (squareID) => {
+    props.handleClick(squareID);
+  }
+
   let bingoSquares = props.data.slice(0, 25).map((item, i) => {
     if (i === 12) {
       // Make the center square a free space
-      return <BingoSquare key={item.pk} text="Free Space" />;
+      return <BingoSquare key={item.pk} index={i} id={item.pk} handleClick={handleClick} text="Free Space" isPressed={item.isPressed} />;
     } else {
-      return <BingoSquare key={item.pk} text={item.text} />;
+      return <BingoSquare key={item.pk} index={i} id={item.pk} handleClick={handleClick} text={item.text} isPressed={item.isPressed} />;
     }
   });
 
