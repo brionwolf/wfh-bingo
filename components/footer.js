@@ -5,7 +5,7 @@ import { faGithub, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-i
 
 export default function Footer(props) {
   return (
-    <div className="footer">
+    <footer>
       <p className="smaller">Newton developed <a href="https://en.wikipedia.org/wiki/History_of_calculus" target="_blank">Calculus</a>, Shakespear wrote <a href="https://en.wikipedia.org/wiki/King_Lear" target="_blank">King Lear</a>.</p>
       <p className="smaller">I made a react powered bingoCard generator...</p>
       <div className="footer-links">
@@ -15,6 +15,6 @@ export default function Footer(props) {
         </a>
       </div>
       <p className="smaller"><a href="https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/prevention.html" target="_blank">Stay Safe<span className="sr-only">: CDC: How to Protect Yourself & Others</span></a></p>
-    </div>
+    </footer>
   );
 };

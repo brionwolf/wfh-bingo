@@ -8,7 +8,7 @@ export default function BingoSquare(props) {
   }
 
   return (
-    <a className="bingo-square" data-index={props.index} href="#" onClick={handleClick} role="button" aria-pressed={props.isPressed}>
+    <a className="bingo-square" id={props.index} data-index={props.index} href="#" onClick={handleClick} role="button" aria-pressed={props.isPressed}>
       <div className="bingo-square-body">
         <div className="bingo-square-content">
           {props.text}

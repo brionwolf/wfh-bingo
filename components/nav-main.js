@@ -19,7 +19,7 @@ export default function NavMain(props) {
   }
 
   return (
-    <div className="main-nav-gutter">
+    <header className="main-nav-gutter">
       <div className="main-nav">
         <div className="left-side-nav">
           <h1 className="brand"><span title="Work From Home" aria-label="Work From Home (WFH)">WFH</span> Bingo</h1>
@@ -35,7 +35,6 @@ export default function NavMain(props) {
           </a>
         </div>
       </div>
-    </div>
-
+    </header>
   );
 };
