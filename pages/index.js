@@ -22,22 +22,31 @@ export default function Index() {
     return array.slice();
   }
 
-  const [squares, setSquares] = useState(() => {
-    return shuffle(data);
-  });
+  const [squares, setSquares] = useState(data);
 
-  const handleResetBoard = () => {
-    console.log("Unclick all bingo squares");
-  }
+  // Shuffle squares on load.
+  useEffect(() => {
+    setSquares(squares => shuffle(squares));
+  }, []);
 
   const handleNewBoard = () => {
     setSquares(squares => shuffle(squares));
   }
 
+  const handleResetBoard = () => {
+    setSquares(squares => squares.map(square => {
+      square.isPressed = false;
+      return square;
+    }));
+  }
+
   const handleClick = (squareIndex) => {
-    const index = parseInt(squareIndex);
-    const bingoSquares = squares.slice(0);
-    return !!bingoSquares[index].isPressed ? bingoSquares[index].isPressed = false : bingoSquares[index].isPressed = true;
+    setSquares(squares => squares.map((square, i) => {
+      if (i == parseInt(squareIndex)) {
+        !!square.isPressed ? square.isPressed = false : square.isPressed = true;
+      }
+      return square;
+    }));
   }
 
   return (
