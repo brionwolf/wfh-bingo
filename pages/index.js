@@ -5,24 +5,10 @@ import Footer from '../components/footer.js';
 import BingoCard from '../components/bingo-card.js';
 import Alerts from '../components/alerts.js';
 import data from '../data/data.json';
+import { shuffle } from '../utils/helpers'
 import { faFileSignature } from '@fortawesome/free-solid-svg-icons';
 
 export default function Index() {
-
-  const shuffle = (array) => {
-    var currentIndex = array.length, temporaryValue, randomIndex;
-
-    while (0 !== currentIndex) {
-      randomIndex = Math.floor(Math.random() * currentIndex);
-      currentIndex -= 1;
-      temporaryValue = array[currentIndex];
-      array[currentIndex] = array[randomIndex];
-      array[currentIndex].isPressed = false;
-      array[randomIndex] = temporaryValue;
-    }
-
-    return array.slice();
-  }
 
   const [squares, setSquares] = useState(data);
   const [alertsList, setAlertsList] = useState([]);
@@ -31,7 +17,6 @@ export default function Index() {
   // Shuffle squares on load.
   useEffect(() => {
     setSquares(squares => shuffle(squares));
-    // setAlertsList(alertsList => alertsList.concat(alertsListTest));
   }, []);
 
   useEffect(() => {
@@ -40,7 +25,12 @@ export default function Index() {
 
   useEffect(() => {
     if (winState) {
-      setAlertsList(alertsList => alertsList.concat([{ type: "success", message: "You win!" }]));
+      setAlertsList(alertsList => alertsList.concat({
+        type: "success",
+        message: "You win! Play again?",
+        confirm: true,
+        close: true,
+      }));
     }
   }, [winState]);
 
@@ -73,6 +63,10 @@ export default function Index() {
   const handleNewBoard = () => {
     setSquares(squares => shuffle(squares));
 
+    if (winState) {
+      setWinState(winState => winState = false);
+    }
+
     if (alertsList.length > 0) {
       setAlertsList(alertsList => alertsList = []);
     }
@@ -83,6 +77,10 @@ export default function Index() {
       square.isPressed = false;
       return square;
     }));
+
+    if (winState) {
+      setWinState(winState => winState = false);
+    }
 
     if (alertsList.length > 0) {
       setAlertsList(alertsList => alertsList = []);
@@ -98,11 +96,15 @@ export default function Index() {
     }));
   }
 
+  const handleYouWonAlert = (alert) => {
+    alert.choice == "close"
+      ? setAlertsList(alertsList => alertsList = [])
+      : handleNewBoard();
+  }
+
   const handleAlertClick = (alert) => {
-    for (let i = 0; i > alertsListTest.length; i++) {
-      if (alertsListTest[i] === alert.alertIndex) {
-        console.log('alert clicked:', alertsListTest[i]);
-      }
+    if (alert.value == "you-win-play-again") {
+      handleYouWonAlert(alert);
     }
   }
 

@@ -22,7 +22,7 @@ export default function NavMain(props) {
     <header className="main-nav-gutter">
       <div className="main-nav">
         <div className="left-side-nav">
-          <h1 className="brand"><span title="Work From Home" aria-label="Work From Home (WFH)">WFH</span> Bingo</h1>
+          <h1 className="brand"><a href="/"><span title="Work From Home" aria-label="Work From Home (WFH)">WFH</span> Bingo</a></h1>
         </div>
         <div className="right-side-nav">
           <a className="reset" href="#" onClick={resetBoard}>
