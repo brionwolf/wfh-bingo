@@ -110,10 +110,6 @@ export default function Index() {
 
   return (
     <>
-      <Head>
-        <title>WFH Bingo</title>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-      </Head>
       <a href="#0" data-role="skip-link" className="sr-only">Skip to Bingo Card</a>
       <NavMain passResetBoard={handleResetBoard} passNewBoard={handleNewBoard} />
       <main id="main">

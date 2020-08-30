@@ -38,6 +38,12 @@
         float: left;
 
         a {
+          padding: 0;
+
+          span {
+            display: inline;
+          }
+
           &:hover, &:focus { box-shadow: unset; }
         }
       }
