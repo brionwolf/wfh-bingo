@@ -1,19 +1,19 @@
 [
   {
     "pk": 1,
-    "text": "\"pivot\""
+    "text": "Says \"pivot\""
   },
   {
     "pk": 2,
-    "text": "\"ping\""
+    "text": "Says \"ping\""
   },
   {
     "pk": 3,
-    "text": "\"Can you see my screen?\""
+    "text": "Says \"Can you see my screen?\""
   },
   {
     "pk": 4,
-    "text": "\"Nice background!\""
+    "text": "Says \"Nice background!\""
   },
   {
     "pk": 5,
@@ -121,11 +121,11 @@
   },
   {
     "pk": 31,
-    "text": "\"Let's stay on for a minute?\""
+    "text": "Says \"Let's stay on for a minute?\""
   },
   {
     "pk": 32,
-    "text": "yawn becomes contagious"
+    "text": "Yawn becomes contagious"
   },
   {
     "pk": 33,
@@ -133,6 +133,18 @@
   },
   {
     "pk": 34,
-    "text": "\"Sync up\""
+    "text": "Says \"Sync up\""
+  },
+  {
+    "pk": 35,
+    "text": "Says \"Am I frozen?\""
+  },
+  {
+    "pk": 36,
+    "text": "Feedback or echo"
+  },
+  {
+    "pk": 37,
+    "text": "Says \"Is everyone muted\""
   }
 ]

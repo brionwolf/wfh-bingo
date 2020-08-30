@@ -36,6 +36,10 @@
         font-size: 1em;
         @media (min-width: $breakpoint-sm) { font-size: 2.369em; }
         float: left;
+
+        a {
+          &:hover, &:focus { box-shadow: unset; }
+        }
       }
     }
 
