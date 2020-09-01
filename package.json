@@ -1,8 +1,9 @@
 {
   "name": "wfh-bingo",
   "version": "1.0.0",
-  "description": "",
+  "description": "A react and nextjs powered bingoCard generator",
   "main": "index.js",
+  "private": true,
   "scripts": {
     "dev": "next",
     "build": "next build",

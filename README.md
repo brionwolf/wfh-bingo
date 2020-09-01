@@ -1,6 +1,6 @@
 # WFH (Work From Home) Bingo
 
-Newton developed [Calculus](https://en.wikipedia.org/wiki/History_of_calculus), Shakespear wrote [King Lear](https://en.wikipedia.org/wiki/King_Lear). I made a react powered bingoCard generator...
+Newton developed [Calculus](https://en.wikipedia.org/wiki/History_of_calculus), Shakespear wrote [King Lear](https://en.wikipedia.org/wiki/King_Lear). I made a react powered bingoCard generator, inspired by our new work/life of video conferencing...
 
 ## Work in Progress
 
