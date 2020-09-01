@@ -6,7 +6,7 @@ import { faGithub, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-i
 export default function Footer(props) {
   return (
     <footer>
-      <p className="smaller">Newton developed <a href="https://en.wikipedia.org/wiki/History_of_calculus" target="_blank">Calculus</a>, Shakespear wrote <a href="https://en.wikipedia.org/wiki/King_Lear" target="_blank">King&nbsp;Lear</a>.</p>
+      <p className="smaller">Newton developed <a href="https://en.wikipedia.org/wiki/History_of_calculus" target="_blank">Calculus</a>, Shakespeare wrote <a href="https://en.wikipedia.org/wiki/King_Lear" target="_blank">King&nbsp;Lear</a>.</p>
       <p className="smaller">I made a react powered bingoCard generator, all inspired by our new work/life of video conferencing.</p>
       <p className="smaller"><em>It&rsquo;s a work in progress</em></p>
       <div className="footer-links">
