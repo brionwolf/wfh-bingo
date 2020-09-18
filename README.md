@@ -4,4 +4,4 @@ Newton developed [Calculus](https://en.wikipedia.org/wiki/History_of_calculus), 
 
 ## Work in Progress
 
-[Submit an issue](https://github.com/brionwolf/wfh-bingo/issues), if you find something amiss or have a suggestion.
+[Submit an issue](https://github.com/brionwolf/wfh-bingo/issues/new), if you find something amiss or have a suggestion.
