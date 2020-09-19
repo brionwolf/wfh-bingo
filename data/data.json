@@ -1,19 +1,19 @@
 [
   {
     "pk": 1,
-    "text": "Says \"pivot\""
+    "text": "Says “pivot”"
   },
   {
     "pk": 2,
-    "text": "Says \"ping\""
+    "text": "Says “ping”"
   },
   {
     "pk": 3,
-    "text": "Says \"Can you see my screen?\""
+    "text": "Says “Can you see my screen?”"
   },
   {
     "pk": 4,
-    "text": "Says \"Nice background!\""
+    "text": "Says “Nice background!”"
   },
   {
     "pk": 5,
@@ -121,7 +121,7 @@
   },
   {
     "pk": 31,
-    "text": "Says \"Let's stay on for a minute?\""
+    "text": "Says “Let's stay on for a minute?”"
   },
   {
     "pk": 32,
@@ -133,11 +133,11 @@
   },
   {
     "pk": 34,
-    "text": "Says \"Sync up\""
+    "text": "Says “Sync up”"
   },
   {
     "pk": 35,
-    "text": "Says \"Am I frozen?\""
+    "text": "Says “Am I frozen?”"
   },
   {
     "pk": 36,
@@ -145,6 +145,58 @@
   },
   {
     "pk": 37,
-    "text": "Says \"Is everyone muted\""
+    "text": "Says “Is everyone muted?”"
+  },
+  {
+    "pk": 38,
+    "text": "Talks to someone off screen"
+  },
+  {
+    "pk": 39,
+    "text": "Discusses future plans"
+  },
+  {
+    "pk": 40,
+    "text": "Someone walks off camera"
+  },
+  {
+    "pk": 41,
+    "text": "Slack/G-chat/Teams notification"
+  },
+  {
+    "pk": 42,
+    "text": "Says “That looks good!”"
+  },
+  {
+    "pk": 43,
+    "text": "Staring at something off screen"
+  },
+  {
+    "pk": 44,
+    "text": "Discusses going outside"
+  },
+  {
+    "pk": 45,
+    "text": "Throw it into Asana/Jira/Monday"
+  },
+  {
+    "pk": 46,
+    "text": "Says “Did you see the game”"
+  },
+  {
+    "pk": 47,
+    "text": "Says “This is fine.”"
+  },
+  {
+    "pk": 48,
+    "text": "Someone says a pun"
+  },
+  {
+    "pk": 49,
+    "text": "Comments on the weather"
+  },
+  {
+    "pk": 50,
+    "text": "Comments on item in background"
   }
 ]

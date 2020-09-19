@@ -41,7 +41,11 @@
     .bingo-square-content {
       font-family: $serif;
       font-size: 0.5rem;
-      @media (min-width: $breakpoint-sm) { font-size: 0.8rem; }
+      line-height: 1.15em;
+      @media (min-width: $breakpoint-sm) {
+        font-size: 0.8rem;
+        line-height: 1.25em;
+      }
       font-weight: $weight-bold;
       hyphens: manual;
       position: absolute;
