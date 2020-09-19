@@ -7,7 +7,7 @@ export default function Footer(props) {
   return (
     <footer>
       <p className="smaller">Newton developed <a href="https://en.wikipedia.org/wiki/History_of_calculus" target="_blank">Calculus</a>, Shakespeare wrote <a href="https://en.wikipedia.org/wiki/King_Lear" target="_blank">King&nbsp;Lear</a>.</p>
-      <p className="smaller">I made a react powered bingoCard generator, inspired by our new way of life/work via video conference.</p>
+      <p className="smaller">I made a react powered bingoCard generator, inspired by our new video conference based way of work/life.</p>
       <div className="footer-links">
         <a className="smaller" href="https://github.com/brionwolf/wfh-bingo/issues/new" target="_blank">Submit an Issue<span className="sr-only"> to the project&rsquo;s github</span></a>
         <a className="smaller" href="https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/prevention.html" target="_blank">Stay Safe<span className="sr-only">: CDC: How to Protect Yourself & Others</span></a>

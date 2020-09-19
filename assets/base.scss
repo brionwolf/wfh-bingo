@@ -1,17 +1,6 @@
 body {
   background-color: $black;
   color: $white;
-
-  @media (prefers-color-scheme: dark) {
-    background-color: $black;
-    color: $white;
-  }
-
-  @media (prefers-color-scheme: light) {
-    background-color: $white;
-    color: $black;
-  }
-
   font-family: $sans-serif;
   font-size: 16px;
   font-weight: $weight-regular;
