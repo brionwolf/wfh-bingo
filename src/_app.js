@@ -1,14 +1,16 @@
 import React, { useState, useEffect } from 'react';
-import Head from 'next/head'
-import NavMain from '../components/nav-main.js';
-import Footer from '../components/footer.js';
-import BingoCard from '../components/bingo-card.js';
-import Alerts from '../components/alerts.js';
+import './styles/main.scss';
+import NavMain from './components/nav-main.js';
+import Footer from './components/footer.js';
+import BingoCard from './components/bingo-card.js';
+import Alerts from './components/alerts.js';
 import data from '../data/data.json';
-import { shuffle } from '../utils/helpers'
+import { shuffle } from './utils/helpers';
 import { faFileSignature } from '@fortawesome/free-solid-svg-icons';
 
-export default function Index() {
+const root = document.getElementById('root');
+
+const App = () => {
 
   const [squares, setSquares] = useState(data);
   const [alertsList, setAlertsList] = useState([]);
@@ -19,6 +21,7 @@ export default function Index() {
     setSquares(squares => shuffle(squares));
   }, []);
 
+  // Check for a winner
   useEffect(() => {
     checkWinner(squares);
   }, [squares]);
@@ -118,5 +121,7 @@ export default function Index() {
       </main>
       <Footer />
     </>
-  );
+  )
 }
+
+export default App;
