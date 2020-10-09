@@ -1,19 +1,19 @@
 [
   {
     "pk": 1,
-    "text": "Says “pivot”"
+    "text": "Says \"pivot\""
   },
   {
     "pk": 2,
-    "text": "Says “ping”"
+    "text": "Says \"ping\""
   },
   {
     "pk": 3,
-    "text": "Says “Can you see my screen?”"
+    "text": "Says \"Can you see my screen?\""
   },
   {
     "pk": 4,
-    "text": "Says “Nice background!”"
+    "text": "Says \"Nice background!\""
   },
   {
     "pk": 5,
@@ -121,7 +121,7 @@
   },
   {
     "pk": 31,
-    "text": "Says “Can we stay on for a minute”"
+    "text": "Says \"Can we stay on for a minute\""
   },
   {
     "pk": 32,
@@ -133,11 +133,11 @@
   },
   {
     "pk": 34,
-    "text": "Says “Sync up”"
+    "text": "Says \"Sync up\""
   },
   {
     "pk": 35,
-    "text": "Says “Am I frozen?”"
+    "text": "Says \"Am I frozen?\""
   },
   {
     "pk": 36,
@@ -145,7 +145,7 @@
   },
   {
     "pk": 37,
-    "text": "Says “Is everyone muted?”"
+    "text": "Says \"Is everyone muted?\""
   },
   {
     "pk": 38,
@@ -161,11 +161,11 @@
   },
   {
     "pk": 41,
-    "text": "Slack, G-chat, or Teams notification"
+    "text": "Hear notification from work chat app"
   },
   {
     "pk": 42,
-    "text": "Says “That looks good!”"
+    "text": "Says \"That looks good!\""
   },
   {
     "pk": 43,
@@ -177,15 +177,15 @@
   },
   {
     "pk": 45,
-    "text": "Throw it into Asana, Jira, Monday, etc"
+    "text": "Says \"Throw it into [task manager]\""
   },
   {
     "pk": 46,
-    "text": "Says “Did you see the game”"
+    "text": "Mentions The Floor is Lava"
   },
   {
     "pk": 47,
-    "text": "Says “This is fine.”"
+    "text": "Says \"This is fine.\""
   },
   {
     "pk": 48,
@@ -198,5 +198,9 @@
   {
     "pk": 50,
     "text": "Comments on item in background"
+  },
+  {
+    "pk": 51,
+    "text": "Mentions Cobra Kai"
   }
 ]
