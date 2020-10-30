@@ -17,7 +17,7 @@
   },
   {
     "pk": 5,
-    "text": "Mentions Tigerking"
+    "text": "Mentions \"Tigerking\""
   },
   {
     "pk": 6,
@@ -61,19 +61,19 @@
   },
   {
     "pk": 16,
-    "text": "Hears sirens"
+    "text": "Sounds of: sirens"
   },
   {
     "pk": 17,
-    "text": "Hears contruction noises"
+    "text": "Sounds of: contruction noises"
   },
   {
     "pk": 18,
-    "text": "Hears truck backing up"
+    "text": "Sounds of: truck backing up"
   },
   {
     "pk": 19,
-    "text": "Phone or alarm rings"
+    "text": "Sounds of: Phone or alarm"
   },
   {
     "pk": 20,
@@ -121,7 +121,7 @@
   },
   {
     "pk": 31,
-    "text": "Says \"Can we stay on for a minute\""
+    "text": "Says \"Can we stay on after for a minute\""
   },
   {
     "pk": 32,
@@ -129,7 +129,7 @@
   },
   {
     "pk": 33,
-    "text": "Audible Notification"
+    "text": "Sounds of: Device Notification"
   },
   {
     "pk": 34,
@@ -161,7 +161,7 @@
   },
   {
     "pk": 41,
-    "text": "Hear notification from work chat app"
+    "text": "Mentions \"Cobra Kai\""
   },
   {
     "pk": 42,
@@ -181,7 +181,7 @@
   },
   {
     "pk": 46,
-    "text": "Mentions The Floor is Lava"
+    "text": "Mentions \"The Floor is Lava\""
   },
   {
     "pk": 47,
@@ -198,9 +198,5 @@
   {
     "pk": 50,
     "text": "Comments on item in background"
-  },
-  {
-    "pk": 51,
-    "text": "Mentions Cobra Kai"
   }
 ]
