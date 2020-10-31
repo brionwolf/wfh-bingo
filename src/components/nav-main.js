@@ -1,12 +1,12 @@
-import React, { useState } from "react";
+import React, { useRef } from "react";
+import useOutsideClick from '../utils/use-outside-click';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTh, faTimesCircle, faToggleOff, faToggleOn } from '@fortawesome/free-solid-svg-icons'
 
 const newCard = <FontAwesomeIcon icon={faTh} />
 
 export default function NavMain(props) {
-  const [isOpen, setIsOpen] = useState(false);
-  const toggle = () => setIsOpen(!isOpen);
+  const mainNavRef = useRef();
 
   const resetBoard = (e) => {
     e.preventDefault();
@@ -28,6 +28,12 @@ export default function NavMain(props) {
     props.passFreeSpaceToggle();
   }
 
+  useOutsideClick(mainNavRef, () => {
+    if (props.menu) {
+      props.passMenuToggle();
+    }
+  });
+
   return (
     <header className="main-nav-gutter">
       <div className="main-nav">
@@ -40,7 +46,7 @@ export default function NavMain(props) {
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
           </button>
-          <div className="nav-list" aria-hidden={!props.menu}>
+          <div className="nav-list" ref={mainNavRef} aria-hidden={!props.menu}>
             <a className="nav-item" href="#" onClick={freeSpaceToggle} aria-pressed={props.freeSpace}>
               {props.freeSpace == true ? <FontAwesomeIcon icon={faToggleOn} /> : <FontAwesomeIcon icon={faToggleOff} />}
               <span>&nbsp; Free Space</span>
