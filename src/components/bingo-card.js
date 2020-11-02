@@ -18,7 +18,7 @@ export default function BingoCard(props) {
 
   return (
     <div className="bingo-card-gutter">
-      <div className="bingo-card">
+      <div className="bingo-card" aria-label="Bingo Card">
         {bingoSquares}
       </div>
     </div>

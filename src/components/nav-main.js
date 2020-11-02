@@ -41,23 +41,23 @@ export default function NavMain(props) {
           <h1 className="brand"><a href="/"><span title="Work From Home" aria-label="Work From Home (WFH)">WFH</span> Bingo</a></h1>
         </div>
         <nav className="right-side-nav">
-          <button className="menu-button" aria-label="toggle menu" aria-pressed={props.menu} onClick={menuToggle}>
+          <button className="menu-button" aria-label={props.menu ? "Menu Button: Menu Open" : "Menu Button"} aria-pressed={props.menu} onClick={menuToggle}>
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
           </button>
           <div className="nav-list" ref={mainNavRef} aria-hidden={!props.menu}>
-            <a className="nav-item" href="#" onClick={freeSpaceToggle} aria-pressed={props.freeSpace}>
+            <a role="button" className="nav-item" href="#" onClick={freeSpaceToggle} aria-pressed={props.freeSpace}>
               {props.freeSpace == true ? <FontAwesomeIcon icon={faToggleOn} /> : <FontAwesomeIcon icon={faToggleOff} />}
-              <span>&nbsp; Free Space</span>
+              <span aria-hidden="true">&nbsp; Free Space</span><span class="sr-only">Toggle free space on bingo Card</span>
             </a>
-            <a className="nav-item" href="#" onClick={resetBoard}>
+            <a role="button" className="nav-item" href="#" onClick={resetBoard}>
               <FontAwesomeIcon icon={faTimesCircle} />
-              <span>&nbsp; Reset</span>
+              <span aria-hidden="true">&nbsp; Reset</span><span class="sr-only">Reset bingo Card squares</span>
             </a>
-            <a className="nav-item" href="#" onClick={newBoard}>
+            <a role="button" className="nav-item" href="#" onClick={newBoard}>
               <FontAwesomeIcon icon={faTh} />
-              <span>&nbsp; New Card</span>
+              <span aria-hidden="true">&nbsp; New Card</span><span class="sr-only">Generate a new bingo card</span>
             </a>
           </div>
         </nav>
