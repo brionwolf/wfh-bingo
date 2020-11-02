@@ -22,28 +22,33 @@
     padding-bottom: 100%;
   }
 
-  .bingo-square-body {
-    overflow: hidden;
-    height: 100%;
-    position: absolute;
-    width: 100%;
+  &[data-freespace="true"] {
+    border: 1px solid $orange;
+    &:hover, &:focus { border: 1px solid $darkest-gray; }
+  }
+}
 
-    .bingo-square-content {
-      font-family: $serif;
-      font-size: 0.5rem;
-      line-height: 1.15em;
-      @media (min-width: $breakpoint-sm) {
-        font-size: 0.8rem;
-        line-height: 1.25em;
-      }
-      font-weight: $weight-bold;
-      hyphens: manual;
-      position: absolute;
-        top: 50%;
-        left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: center;
-      width: 80%;
+.bingo-square-body {
+  overflow: hidden;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+
+  .bingo-square-content {
+    font-family: $serif;
+    font-size: 0.5rem;
+    line-height: 1.15em;
+    @media (min-width: $breakpoint-sm) {
+      font-size: 0.8rem;
+      line-height: 1.25em;
     }
+    font-weight: $weight-bold;
+    hyphens: manual;
+    position: absolute;
+      top: 50%;
+      left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 80%;
   }
 }
