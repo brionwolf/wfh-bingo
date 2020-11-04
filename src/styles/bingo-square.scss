@@ -1,30 +1,48 @@
-.bingo-square  {
+.bingo-square {
   background: $darker-gray;
-    &:hover, &:focus { background: $darkest-gray; }
-    &:active { background: $orange; }
-  border-radius: .2em;
+
+  &:hover,
+  &:focus {
+    background: $darkest-gray;
+  }
+
+  &:active {
+    background: $orange;
+  }
+
+  border-radius: 0.2em;
   color: $white;
   cursor: pointer;
   position: relative;
-  transition: background 0.2s ease-in-out,
-              color 0.2s ease-in-out;
+  transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
   width: 100%;
 
-  &[aria-pressed="true"] {
+  &[aria-pressed='true'] {
     background: $orange;
-    &:hover, &:focus { background: $dark-orange; }
-    &:active { background: $darker-orange; }
+
+    &:hover,
+    &:focus {
+      background: $dark-orange;
+    }
+
+    &:active {
+      background: $darker-orange;
+    }
   }
 
   &:after {
-    content: "";
+    content: '';
     display: block;
     padding-bottom: 100%;
   }
 
-  &[data-freespace="true"] {
+  &[data-freespace='true'] {
     border: 1px solid $orange;
-    &:hover, &:focus { border: 1px solid $darkest-gray; }
+
+    &:hover,
+    &:focus {
+      border: 1px solid $darkest-gray;
+    }
   }
 }
 
@@ -42,11 +60,12 @@
       font-size: 0.8rem;
       line-height: 1.25em;
     }
+
     font-weight: $weight-bold;
     hyphens: manual;
     position: absolute;
-      top: 50%;
-      left: 50%;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
     width: 80%;

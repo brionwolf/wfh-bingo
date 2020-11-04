@@ -8,30 +8,36 @@ body {
   min-width: 280px;
 }
 
-h1, .h1 {
+h1,
+.h1 {
   font-family: $sans-serif;
   font-size: 2.369em;
   font-weight: $weight-bold;
 }
 
-h2, .h2 {
+h2,
+.h2 {
   font-family: $serif;
   font-size: 1.777em;
 }
 
-h3, .h3 {
+h3,
+.h3 {
   font-family: $sans-serif;
   font-size: 1.333em;
   font-weight: $weight-bold;
 }
 
-h4, .h4 {
+h4,
+.h4 {
   font-family: $serif;
   font-size: 1em;
   text-transform: uppercase;
 }
 
-h5, .h5, .smaller {
+h5,
+.h5,
+.smaller {
   font-family: $sans-serif;
   font-size: 0.75em;
 }
@@ -56,17 +62,17 @@ em {
 /* Skip Link
 ------------------------ */
 
-.sr-only[data-role="skip-link"] {
+.sr-only[data-role='skip-link'] {
   background: $black;
   color: $white;
 }
 
-.sr-only[data-role="skip-link"]:active,
-.sr-only[data-role="skip-link"]:focus {
+.sr-only[data-role='skip-link']:active,
+.sr-only[data-role='skip-link']:focus {
   display: block;
   font-weight: bold;
   height: auto;
-  padding: 5px  10px;
+  padding: 5px 10px;
   position: relative;
   overflow: visible;
   text-align: left;

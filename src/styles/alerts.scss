@@ -2,39 +2,43 @@
 
 .alert-list {
   position: relative;
-    top: -0.6em;
-    right: 0;
-    z-index: 9999;
+  top: -0.6em;
+  right: 0;
+  z-index: 9999;
   width: calc(100% - 20px);
-    min-width: 280px;
-    max-width: calc(80vh - 40px);
+  min-width: 280px;
+  max-width: calc(80vh - 40px);
 
   @media (min-width: $breakpoint-sm) {
     position: absolute;
-      top: calc(60px + 1.2em);
-      right: 50%;
+    top: calc(60px + 1.2em);
+    right: 50%;
     transform: translateX(50%);
   }
 }
 
 .alert {
   -webkit-animation: fadein 0.1s 0s 1;
-  -moz-animation:    fadein 0.1s 0s 1;
-  -o-animation:      fadein 0.1s 0s 1;
-  animation:         fadein 0.1s 0s 1;
+  -moz-animation: fadein 0.1s 0s 1;
+  -o-animation: fadein 0.1s 0s 1;
+  animation: fadein 0.1s 0s 1;
   border-radius: 0.3em;
   box-shadow: 0 2px 5px 0 $black;
   color: $white;
   display: grid;
-    grid-template-columns: 1fr auto auto;
-    grid-template-rows: 1fr;
-    align-content: center;
+  grid-template-columns: 1fr auto auto;
+  grid-template-rows: 1fr;
+  align-content: center;
   font-size: 0.8em;
-  @media (min-width: $breakpoint-sm) { font-size: 1em; }
+
+  @media (min-width: $breakpoint-sm) {
+    font-size: 1em;
+  }
+
   opacity: 1;
   padding: 0;
   position: absolute;
-    right: 0;
+  right: 0;
   text-align: right;
   width: auto;
 
@@ -46,27 +50,27 @@
     padding: 1em;
   }
 
-  &[data-type="primary"] {
+  &[data-type='primary'] {
     background: $blue;
     font-weight: bold;
   }
 
-  &[data-type="success"] {
+  &[data-type='success'] {
     background: $green;
     font-weight: bold;
   }
 
-  &[data-type="danger"] {
+  &[data-type='danger'] {
     background: $red;
     font-weight: bold;
   }
 
-  &[data-type="warning"] {
+  &[data-type='warning'] {
     background: $orange;
     font-weight: bold;
   }
 
-  &[data-type="info"] {
+  &[data-type='info'] {
     background: $white;
     color: $black;
     font-weight: bold;
@@ -76,7 +80,7 @@
     }
   }
 
-  &[data-type="info-dark"] {
+  &[data-type='info-dark'] {
     background: $black;
     font-weight: bold;
   }
@@ -90,21 +94,41 @@
 }
 
 @-webkit-keyframes fadein {
-  0%   { opacity: 0; }
-  100% { opacity: 1; }
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 @-moz-keyframes fadein {
-  0%   { opacity: 0; }
-  100% { opacity: 1; }
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 @-o-keyframes fadein {
-  0%   { opacity: 0; }
-  100% { opacity: 1; }
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes fadein {
-  0%   { opacity: 0; }
-  100% { opacity: 1; }
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }

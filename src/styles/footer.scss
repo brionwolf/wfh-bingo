@@ -3,7 +3,7 @@ footer {
   margin: 1em auto;
   text-align: center;
   width: 60%;
-    max-width: 400px;
+  max-width: 400px;
 
   p {
     line-height: 1.3em;
@@ -15,22 +15,23 @@ footer {
     text-decoration: none;
     transition: color 0.2s ease-in-out;
 
-      &:hover, &:focus {
-        color: $orange;
-        text-decoration: underline;
-      }
+    &:hover,
+    &:focus {
+      color: $orange;
+      text-decoration: underline;
+    }
 
-      &:active {
-        color: $darker-orange;
-      }
+    &:active {
+      color: $darker-orange;
+    }
   }
 
   .footer-links {
     display: flex;
-      align-items: center;
-      column-gap: 1em;
-      flex-wrap: wrap;
-      justify-content: center;
+    align-items: center;
+    column-gap: 1em;
+    flex-wrap: wrap;
+    justify-content: center;
     margin: 0.3em auto;
     max-width: 500px;
 

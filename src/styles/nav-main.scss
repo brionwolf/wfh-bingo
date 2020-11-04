@@ -3,42 +3,49 @@
 .main-nav-gutter {
   background: $blue;
   height: 60px;
-  @media (min-width: $breakpoint-sm) { height: 100px; }
+
+  @media (min-width: $breakpoint-sm) {
+    height: 100px;
+  }
+
   margin: 0 0 20px;
   width: 100%;
-    min-width: 280px;
+  min-width: 280px;
 
   .main-nav {
     margin: 0 auto;
     position: relative;
     width: 100%;
-      min-width: 280px;
-      max-width: 80vh;
+    min-width: 280px;
+    max-width: 80vh;
 
     a {
       place-self: center;
       color: $white;
       font-weight: $weight-bold;
       padding: 0.75em;
-      @media (min-width: $breakpoint-sm) { padding: 0.75em 1em; }
+
+      @media (min-width: $breakpoint-sm) {
+        padding: 0.75em 1em;
+      }
+
       text-decoration: none;
-      transition: background 0.2s ease-in-out,
-                  box-shadow 0.2s ease-in-out,
-                  color 0.2s ease-in-out;
+      transition: background 0.2s ease-in-out, box-shadow 0.2s ease-in-out,
+        color 0.2s ease-in-out;
     }
   }
 }
 
 .left-side-nav {
   display: grid;
-    column-gap: 20px;
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-    justify-items: stretch;
+  column-gap: 20px;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  justify-items: stretch;
   height: 40px;
   position: absolute;
-    left: 20px;
-    top: 10px;
+  left: 20px;
+  top: 10px;
 
   @media (min-width: $breakpoint-sm) {
     height: 60px;
@@ -48,7 +55,11 @@
   .brand {
     float: left;
     font-size: 1em;
-    @media (min-width: $breakpoint-sm) { font-size: 2.369em; }
+
+    @media (min-width: $breakpoint-sm) {
+      font-size: 2.369em;
+    }
+
     place-self: center;
 
     a {
@@ -63,14 +74,14 @@
 
 .right-side-nav {
   display: grid;
-    column-gap: 20px;
-    grid-template-columns: auto;
-    grid-template-rows: auto;
-    justify-items: stretch;
+  column-gap: 20px;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  justify-items: stretch;
   height: 40px;
   position: absolute;
-    right: 20px;
-    top: 10px;
+  right: 20px;
+  top: 10px;
 
   @media (min-width: $breakpoint-sm) {
     column-gap: 20px;
@@ -98,7 +109,7 @@
     transition: transform 0.2s ease-in-out;
   }
 
-  &[aria-pressed="true"] {
+  &[aria-pressed='true'] {
     background: $black;
 
     span {
@@ -110,7 +121,7 @@
       }
 
       &:first-child {
-        transform: rotate(-45deg)translate(-0.4em, 0.4em);
+        transform: rotate(-45deg) translate(-0.4em, 0.4em);
         visibility: visible;
       }
     }
@@ -120,20 +131,23 @@
 .nav-list {
   display: none;
   height: 0;
-  transition: height 0.2s ease-in-out,
-              visibility 0.2s ease-in-out;
+  transition: height 0.2s ease-in-out, visibility 0.2s ease-in-out;
 
-  &[aria-hidden="false"] {
+  &[aria-hidden='false'] {
     background-color: $black;
     border-radius: 5% 0 5% 5%;
     box-shadow: 0 3px 3px -3px $darkest-gray;
     display: block;
     height: auto;
     position: absolute;
-      right: 0;
-      top: 98%;
-      @media (min-width: $breakpoint-sm) { top: 80%; }
-      z-index: 999999;
+    right: 0;
+    top: 98%;
+    
+    @media (min-width: $breakpoint-sm) {
+      top: 80%;
+    }
+    
+    z-index: 999999;
     width: 200px;
   }
 
@@ -146,7 +160,8 @@
       box-shadow: unset;
     }
 
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       color: $ligher-orange;
     }
 
@@ -154,7 +169,7 @@
       color: $orange;
     }
 
-    &[aria-pressed="true"] > svg {
+    &[aria-pressed='true'] > svg {
       color: $light-green;
     }
   }

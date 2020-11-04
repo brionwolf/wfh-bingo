@@ -5,23 +5,22 @@ import Footer from './components/footer.js';
 import BingoCard from './components/bingo-card.js';
 import Alerts from './components/alerts.js';
 import data from '../data/data.json';
-import { shuffle } from './utils/helpers';
+import { shuffle, randomSpace } from './utils/helpers';
 import { faFileSignature } from '@fortawesome/free-solid-svg-icons';
 
 const root = document.getElementById('root');
 
 const App = () => {
-
   const [squares, setSquares] = useState(data);
   const [alertsList, setAlertsList] = useState([]);
   const [winState, setWinState] = useState(false);
   const [menu, setMenu] = useState(false);
   const [freeSpace, setFreeSpace] = useState(true);
-  const [randomFree, setRandomFree] = useState(false);
+  const [freeSpaceLoc, setFreeSpaceLoc] = useState(12);
 
   // Shuffle squares on load.
   useEffect(() => {
-    setSquares(squares => shuffle(squares));
+    setSquares((squares) => shuffle(squares));
   }, []);
 
   // Check for a winner
@@ -31,12 +30,14 @@ const App = () => {
 
   useEffect(() => {
     if (winState) {
-      setAlertsList(alertsList => alertsList.concat({
-        type: "success",
-        message: "You win! Play again?",
-        confirm: true,
-        close: true,
-      }));
+      setAlertsList((alertsList) =>
+        alertsList.concat({
+          type: 'success',
+          message: 'You win! Play again?',
+          confirm: true,
+          close: true,
+        }),
+      );
     }
   }, [winState]);
 
@@ -53,112 +54,127 @@ const App = () => {
       [3, 8, 13, 18, 23],
       [4, 9, 14, 19, 24],
       [0, 6, 12, 18, 24],
-      [4, 8, 12, 16, 20]
+      [4, 8, 12, 16, 20],
     ];
 
     for (let i = 0; i < winMatrix.length; i++) {
       const [a, b, c, d, e] = winMatrix[i];
-      if (squares[a].isPressed && squares[b].isPressed && squares[c].isPressed && squares[d].isPressed && squares[e].isPressed) {
-        return setWinState(winState => winState = true);
+      if (
+        squares[a].isPressed &&
+        squares[b].isPressed &&
+        squares[c].isPressed &&
+        squares[d].isPressed &&
+        squares[e].isPressed
+      ) {
+        return setWinState((winState) => (winState = true));
       }
     }
 
     return null;
-  }
+  };
 
   const handleNewBoard = () => {
-    setSquares(squares => shuffle(squares));
+    setSquares((squares) => shuffle(squares));
 
     if (winState) {
-      setWinState(winState => winState = false);
+      setWinState((winState) => (winState = false));
     }
 
     if (alertsList.length > 0) {
-      setAlertsList(alertsList => alertsList = []);
+      setAlertsList((alertsList) => (alertsList = []));
     }
-  }
+  };
 
   const handleResetBoard = () => {
-    setSquares(squares => squares.map(square => {
-      square.isPressed = false;
-      return square;
-    }));
+    setSquares((squares) =>
+      squares.map((square) => {
+        square.isPressed = false;
+        return square;
+      }),
+    );
 
     if (winState) {
-      setWinState(winState => winState = false);
+      setWinState((winState) => (winState = false));
     }
 
     if (alertsList.length > 0) {
-      setAlertsList(alertsList => alertsList = []);
+      setAlertsList((alertsList) => (alertsList = []));
     }
-  }
+  };
 
   const handleClick = (squareIndex) => {
-    setSquares(squares => squares.map((square, i) => {
-      if (i == parseInt(squareIndex)) {
-        !!square.isPressed ? square.isPressed = false : square.isPressed = true;
-      }
-      return square;
-    }));
-  }
+    setSquares((squares) =>
+      squares.map((square, i) => {
+        if (i == parseInt(squareIndex)) {
+          !!square.isPressed
+            ? (square.isPressed = false)
+            : (square.isPressed = true);
+        }
+        return square;
+      }),
+    );
+  };
 
   const handleYouWonAlert = (alert) => {
-    alert.choice == "close"
-      ? setAlertsList(alertsList => alertsList = [])
+    alert.choice == 'close'
+      ? setAlertsList((alertsList) => (alertsList = []))
       : handleNewBoard();
-  }
+  };
 
   const handleAlertClick = (alert) => {
-    if (alert.value == "you-win-play-again") {
+    if (alert.value == 'you-win-play-again') {
       handleYouWonAlert(alert);
     }
-  }
+  };
 
   const handleMenuToggle = () => {
-    menu == true ? setMenu(menu => menu = false) : setMenu(menu => menu = true);
-  }
+    menu == true
+      ? setMenu((menu) => (menu = false))
+      : setMenu((menu) => (menu = true));
+  };
 
   const handleFreeSpaceToggle = () => {
     if (freeSpace) {
-      setFreeSpace(freeSpace => freeSpace = false);
-      setRandomFree(randomFree => randomFree = false);
+      setFreeSpace((freeSpace) => (freeSpace = false));
+      setFreeSpaceLoc((freeSpaceLoc) => (freeSpaceLoc = 12));
     } else {
-      setFreeSpace(freeSpace => freeSpace = true);
+      setFreeSpace((freeSpace) => (freeSpace = true));
     }
-  }
+  };
 
-  const handleRandomFreeToggle = () => {
-    randomFree == true ? setRandomFree(randomFree => randomFree = false) : setRandomFree(randomFree => randomFree = true);
-  }
+  const handleFreeSpaceLocToggle = () => {
+    freeSpaceLoc == 12
+      ? setFreeSpaceLoc((freeSpaceLoc) => (freeSpaceLoc = randomSpace(25)))
+      : setFreeSpaceLoc((freeSpaceLoc) => (freeSpaceLoc = 12));
+  };
 
   return (
     <>
-      <a href="#0" data-role="skip-link" className="sr-only">Skip to Bingo Card</a>
+      <a href="#0" data-role="skip-link" className="sr-only">
+        Skip to Bingo Card
+      </a>
       <NavMain
         freeSpace={freeSpace}
-        randomFree={randomFree}
+        freeSpaceLoc={freeSpaceLoc}
         menu={menu}
         passResetBoard={handleResetBoard}
         passNewBoard={handleNewBoard}
         passMenuToggle={handleMenuToggle}
         passFreeSpaceToggle={handleFreeSpaceToggle}
-        passRandomFreeToggle={handleRandomFreeToggle}
+        passFreeSpaceLocToggle={handleFreeSpaceLocToggle}
       />
       <main id="main">
-        <Alerts
-          alertsList={alertsList}
-          handleClick={handleAlertClick}
-        />
+        <Alerts alertsList={alertsList} handleClick={handleAlertClick} />
         <BingoCard
           data={squares}
           freeSpace={freeSpace}
-          randomFree={randomFree}
+          freeSpaceLoc={freeSpaceLoc}
           handleClick={handleClick}
         />
       </main>
       <Footer />
     </>
-  )
-}
+  );
+};
 
 export default App;
