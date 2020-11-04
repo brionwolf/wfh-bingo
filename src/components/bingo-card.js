@@ -1,5 +1,6 @@
 import React from 'react';
 import BingoSquare from '../components/bingo-square.js';
+import { randomSpace } from '../utils/helpers';
 
 export default function BingoCard(props) {
 
@@ -7,8 +8,10 @@ export default function BingoCard(props) {
     props.handleClick(squareID);
   }
 
+  const freeSpaceLocation = props.randomFree == true ? randomSpace(25) : 12;
+
   let bingoSquares = props.data.slice(0, 25).map((item, i) => {
-    if (i === 12 && props.freeSpace) {
+    if (i === freeSpaceLocation && props.freeSpace) {
       // Make the center square a free space
       return <BingoSquare key={item.pk} index={i} id={item.pk} handleClick={handleClick} isFreespace={props.freeSpace} text="Free Space" isPressed={item.isPressed} />;
     } else {

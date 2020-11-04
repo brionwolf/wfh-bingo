@@ -17,6 +17,7 @@ const App = () => {
   const [winState, setWinState] = useState(false);
   const [menu, setMenu] = useState(false);
   const [freeSpace, setFreeSpace] = useState(true);
+  const [randomFree, setRandomFree] = useState(false);
 
   // Shuffle squares on load.
   useEffect(() => {
@@ -118,7 +119,16 @@ const App = () => {
   }
 
   const handleFreeSpaceToggle = () => {
-    freeSpace == true ? setFreeSpace(freeSpace => freeSpace = false) : setFreeSpace(freeSpace => freeSpace = true);
+    if (freeSpace) {
+      setFreeSpace(freeSpace => freeSpace = false);
+      setRandomFree(randomFree => randomFree = false);
+    } else {
+      setFreeSpace(freeSpace => freeSpace = true);
+    }
+  }
+
+  const handleRandomFreeToggle = () => {
+    randomFree == true ? setRandomFree(randomFree => randomFree = false) : setRandomFree(randomFree => randomFree = true);
   }
 
   return (
@@ -126,11 +136,13 @@ const App = () => {
       <a href="#0" data-role="skip-link" className="sr-only">Skip to Bingo Card</a>
       <NavMain
         freeSpace={freeSpace}
+        randomFree={randomFree}
         menu={menu}
         passResetBoard={handleResetBoard}
         passNewBoard={handleNewBoard}
         passMenuToggle={handleMenuToggle}
         passFreeSpaceToggle={handleFreeSpaceToggle}
+        passRandomFreeToggle={handleRandomFreeToggle}
       />
       <main id="main">
         <Alerts
@@ -140,6 +152,7 @@ const App = () => {
         <BingoCard
           data={squares}
           freeSpace={freeSpace}
+          randomFree={randomFree}
           handleClick={handleClick}
         />
       </main>

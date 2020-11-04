@@ -29,3 +29,8 @@ export function slugify(string) {
     .replace(/^-+/, '') // Trim - from start of text
     .replace(/-+$/, '') // Trim - from end of text
 }
+
+export function randomSpace(max) {
+  const space = Math.floor(Math.random() * Math.floor(max));
+  return space == 12 ? randomSpace(max) : space;
+}

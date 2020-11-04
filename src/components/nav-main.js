@@ -28,6 +28,12 @@ export default function NavMain(props) {
     props.passFreeSpaceToggle();
   }
 
+  const randomFreeToggle = (e) => {
+    e.preventDefault;
+    // console.log('working')
+    props.passRandomFreeToggle();
+  }
+
   useOutsideClick(mainNavRef, () => {
     if (props.menu) {
       props.passMenuToggle();
@@ -51,6 +57,12 @@ export default function NavMain(props) {
               {props.freeSpace == true ? <FontAwesomeIcon icon={faToggleOn} /> : <FontAwesomeIcon icon={faToggleOff} />}
               <span aria-hidden="true">&nbsp; Free Space</span><span className="sr-only">Toggle free space on bingo Card</span>
             </a>
+            {props.freeSpace &&
+              <a role="button" className="nav-item" href="#" onClick={randomFreeToggle} aria-pressed={props.randomFree}>
+                {props.randomFree == true ? <FontAwesomeIcon icon={faToggleOn} /> : <FontAwesomeIcon icon={faToggleOff} />}
+                <span aria-hidden="true">&nbsp; Random Free Space</span><span className="sr-only">Randomly place the Free Space</span>
+              </a>
+            }
             <a role="button" className="nav-item" href="#" onClick={resetBoard}>
               <FontAwesomeIcon icon={faTimesCircle} />
               <span aria-hidden="true">&nbsp; Reset</span><span className="sr-only">Reset bingo Card squares</span>
