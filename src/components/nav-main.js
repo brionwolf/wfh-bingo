@@ -60,7 +60,7 @@ export default function NavMain(props) {
         <nav className="right-side-nav">
           <button
             className="menu-button"
-            aria-label={props.menu ? 'Menu Button: Menu Open' : 'Menu Button'}
+            aria-label={props.menu ? 'Menu Open' : 'Menu'}
             aria-pressed={props.menu}
             onClick={menuToggle}
           >
@@ -69,8 +69,7 @@ export default function NavMain(props) {
             <span aria-hidden="true"></span>
           </button>
           <div className="nav-list" ref={mainNavRef} aria-hidden={!props.menu}>
-            <a
-              role="button"
+            <button
               className="nav-item"
               href="#"
               onClick={freeSpaceToggle}
@@ -83,10 +82,9 @@ export default function NavMain(props) {
               )}
               <span aria-hidden="true">&nbsp; Free Space</span>
               <span className="sr-only">Toggle free space on bingo Card</span>
-            </a>
+            </button>
             {props.freeSpace && (
-              <a
-                role="button"
+              <button
                 className="nav-item"
                 href="#"
                 onClick={freeSpaceLocToggle}
@@ -99,18 +97,18 @@ export default function NavMain(props) {
                 )}
                 <span aria-hidden="true">&nbsp; Random Free Space</span>
                 <span className="sr-only">Randomly place the Free Space</span>
-              </a>
+              </button>
             )}
-            <a role="button" className="nav-item" href="#" onClick={resetBoard}>
+            <button className="nav-item" href="#" onClick={resetBoard}>
               <FontAwesomeIcon icon={faTimesCircle} />
               <span aria-hidden="true">&nbsp; Reset</span>
               <span className="sr-only">Reset bingo Card squares</span>
-            </a>
-            <a role="button" className="nav-item" href="#" onClick={newBoard}>
+            </button>
+            <button className="nav-item" href="#" onClick={newBoard}>
               <FontAwesomeIcon icon={faTh} />
               <span aria-hidden="true">&nbsp; New Card</span>
               <span className="sr-only">Generate a new bingo card</span>
-            </a>
+            </button>
           </div>
         </nav>
       </div>

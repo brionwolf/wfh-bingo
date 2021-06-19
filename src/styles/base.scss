@@ -65,6 +65,7 @@ em {
 .sr-only[data-role='skip-link'] {
   background: $black;
   color: $white;
+  outline: solid $light-blue;
 }
 
 .sr-only[data-role='skip-link']:active,
