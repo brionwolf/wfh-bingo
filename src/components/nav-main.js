@@ -86,7 +86,6 @@ export default function NavMain(props) {
             {props.freeSpace && (
               <button
                 className="nav-item"
-                href="#"
                 onClick={freeSpaceLocToggle}
                 aria-pressed={props.freeSpaceLoc == 12 ? false : true}
               >
@@ -99,12 +98,12 @@ export default function NavMain(props) {
                 <span className="sr-only">Randomly place the Free Space</span>
               </button>
             )}
-            <button className="nav-item" href="#" onClick={resetBoard}>
+            <button className="nav-item" onClick={resetBoard}>
               <FontAwesomeIcon icon={faTimesCircle} />
               <span aria-hidden="true">&nbsp; Reset</span>
               <span className="sr-only">Reset bingo Card squares</span>
             </button>
-            <button className="nav-item" href="#" onClick={newBoard}>
+            <button className="nav-item" onClick={newBoard}>
               <FontAwesomeIcon icon={faTh} />
               <span aria-hidden="true">&nbsp; New Card</span>
               <span className="sr-only">Generate a new bingo card</span>

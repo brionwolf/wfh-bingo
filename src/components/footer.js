@@ -4,7 +4,6 @@ import { faGlobe } from '@fortawesome/free-solid-svg-icons';
 import {
   faGithub,
   faTwitter,
-  faInstagram,
 } from '@fortawesome/free-brands-svg-icons';
 
 export default function Footer(props) {
@@ -55,6 +54,7 @@ export default function Footer(props) {
           <FontAwesomeIcon icon={faTwitter} />
           <span className="sr-only">Max on twitter</span>
         </a>
+        <span className="smaller">&copy; 2020</span>
       </div>
     </footer>
   );
