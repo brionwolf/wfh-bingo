@@ -1,0 +1,72 @@
+button.card-square {
+  background-color: var(--grey-darker);
+  border: 1px solid transparent;
+  border-radius: 3px;
+  color: var(--white);
+  cursor: pointer;
+  display: block;
+  height: 0;
+  position: relative;
+  padding-bottom: 100%;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  width: 100%;
+
+  &:hover,
+  &:focus {
+    background-color: var(--grey-darkest);
+  }
+
+  &:active {
+    background-color: var(--blue-light);
+  }
+
+  &[aria-pressed='true'] {
+    background-color: var(--blue-light);
+
+    &:hover,
+    &:focus {
+      background-color: var(--blue-dark);
+    }
+
+    &:active {
+      background-color: var(--darker-blue);
+    }
+  }
+
+  &[data-freespace='true'] {
+    border: 1px solid var(--blue-light);
+
+    &:hover,
+    &:focus {
+      border: 1px solid var(--blue);
+    }
+  }
+
+  & .card-square-content {
+    font-family: var(--serif);
+    font-size: 0.5em;
+    line-height: 1.3em;
+
+    @media (--medium-min) {
+      font-size: 0.8em;
+    }
+    @media (--tablet-min) {
+      font-size: 1.2em;
+    }
+
+    align-items: center;
+    display: flex;
+    height: 100%;
+    hyphens: manual;
+    justify-content: center;
+    overflow: hidden;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    transition: font-size 0.3s ease-in-out;
+
+    width: 100%;
+  }
+}

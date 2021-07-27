@@ -1,20 +1,14 @@
-/*  Alert Item */
-
 .alert-list {
+  display: block;
+  margin: 0 auto;
+  padding: 0 20px;
   position: relative;
-  top: -0.6em;
+  top: -20px;
   right: 0;
   z-index: 9999;
-  width: calc(100% - 20px);
-  min-width: 280px;
-  max-width: calc(80vh - 40px);
-
-  @media (min-width: $breakpoint-sm) {
-    position: absolute;
-    top: calc(60px + 1.2em);
-    right: 50%;
-    transform: translateX(50%);
-  }
+  width: 100vw;
+  min-width: var(--min-width);
+  max-width: 80vh;
 }
 
 .alert {
@@ -23,70 +17,64 @@
   -o-animation: fadein 0.1s 0s 1;
   animation: fadein 0.1s 0s 1;
   border-radius: 0.3em;
-  box-shadow: 0 2px 5px 0 $black;
-  color: $white;
-  display: grid;
-  grid-template-columns: 1fr auto auto;
-  grid-template-rows: 1fr;
-  align-content: center;
+  box-shadow: 0 2px 5px 0 var(--black);
+  color: var(--white);
+  display: flex;
+  align-items: center;
   font-size: 0.8em;
-
-  @media (min-width: $breakpoint-sm) {
-    font-size: 1em;
-  }
 
   opacity: 1;
   padding: 0;
   position: absolute;
-  right: 0;
+  right: 20px;
   text-align: right;
   width: auto;
 
-  button {
+  & button {
     border-radius: 0.3em;
     background: unset;
     cursor: pointer;
-    color: $white;
+    color: var(--white);
     padding: 1em;
   }
 
   &[data-type='primary'] {
-    background: $blue;
-    font-weight: bold;
+    background: var(--blue);
+    font-weight: var(--weight-bold);
   }
 
   &[data-type='success'] {
-    background: $green;
-    font-weight: bold;
+    background: var(--green);
+    font-weight: var(--weight-bold);
   }
 
   &[data-type='danger'] {
-    background: $red;
-    font-weight: bold;
+    background: var(--red);
+    font-weight: var(--weight-bold);
   }
 
   &[data-type='warning'] {
-    background: $orange;
-    font-weight: bold;
+    background: var(--orange);
+    font-weight: var(--weight-bold);
   }
 
   &[data-type='info'] {
-    background: $white;
-    color: $black;
-    font-weight: bold;
+    background: var(--white);
+    color: var(--black);
+    font-weight: var(--weight-bold);
 
     button {
-      color: $black;
+      color: var(--black);
     }
   }
 
   &[data-type='info-dark'] {
-    background: $black;
-    font-weight: bold;
+    background: var(--black);
+    font-weight: var(--weight-bold);
   }
 
-  &-content {
-    padding: 1em;
+  & .alert-content {
+    padding: 10px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;

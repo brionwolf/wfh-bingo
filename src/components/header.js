@@ -45,22 +45,21 @@ export default function NavMain(props) {
   });
 
   return (
-    <header className="main-nav-gutter">
-      <div className="main-nav">
-        <div className="left-side-nav">
-          <h1 className="brand">
-            <a href="/">
-              <span title="Work From Home" aria-label="Work From Home (WFH)">
-                WFH
-              </span>{' '}
-              Bingo
-            </a>
-          </h1>
-        </div>
-        <nav className="right-side-nav">
+    <header>
+      <layout-lock>
+        <h1 className="brand san-serif-larger">
+          <a href="/">
+            <span title="Work From Home" aria-label="Work From Home (WFH)">
+              WFH
+            </span>
+            &nbsp;Bingo
+          </a>
+        </h1>
+
+        <nav-container>
           <button
             className="menu-button"
-            aria-label={props.menu ? 'Menu Open' : 'Menu'}
+            aria-label="Menu Button"
             aria-pressed={props.menu}
             onClick={menuToggle}
           >
@@ -68,7 +67,12 @@ export default function NavMain(props) {
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
           </button>
-          <div className="nav-list" ref={mainNavRef} aria-hidden={!props.menu}>
+
+          <nav
+            aria-label="Main Navigation"
+            ref={mainNavRef}
+            aria-hidden={!props.menu}
+          >
             <button
               className="nav-item"
               href="#"
@@ -108,9 +112,9 @@ export default function NavMain(props) {
               <span aria-hidden="true">&nbsp; New Card</span>
               <span className="sr-only">Generate a new bingo card</span>
             </button>
-          </div>
-        </nav>
-      </div>
+          </nav>
+        </nav-container>
+      </layout-lock>
     </header>
   );
 }

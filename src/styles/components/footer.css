@@ -1,0 +1,54 @@
+footer {
+  display: block;
+  text-align: center;
+  width: 100%;
+  min-width: var(--min-width);
+
+  & layout-lock {
+    display: block;
+    margin: 0 auto;
+    padding: 20px;
+    min-width: var(--min-width);
+    max-width: 80vh;
+  }
+
+  & a {
+    color: var(--blue-light);
+    font-weight: var(--weight-black);
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+
+    &:hover,
+    &:focus {
+      color: var(--orange);
+    }
+
+    &:active {
+      color: var(--orange-darker);
+    }
+  }
+
+  & .footer-links {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0.3em auto;
+    max-width: 500px;
+
+    & a {
+      display: inline-block;
+      margin-right: 10px;
+      margin-bottom: 10px;
+      padding: 5px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      & svg {
+        font-size: 1.3em;
+      }
+    }
+  }
+}

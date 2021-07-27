@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;400;700;900&display=swap');
+
+/* prettier-ignore */
+:root {
+  --sans-serif:       'Lato', Helvetica, Ariel, sans-serif;
+  --serif:            'Roboto Slab', serif;
+  --monospace:        'Roboto Mono', monospace;
+
+  --weight-thin:      100;
+  --weight-regular:   400;
+  --weight-semi-bold: 600;
+  --weight-bold:      700;
+  --weight-black:     900;
+
+  --min-height:       280px;
+  --min-width:        280px;
+
+  /* Colors */
+
+  --blue-dark:        #0c63ce;
+  --blue:             #0067e6;
+  --blue-light:       #4393f4;
+
+  --orange-darker:    #c2571a;
+  --orange-dark:      #da621e;
+  --orange:           #f26d21;
+  --orange-light:     #ce7e39;
+  --orange-lighter:   #ffa759;
+
+  --red-dark:         #710c1a;
+  --red:              #e21833;
+  --red-light:        #eb5d70;
+
+  --green-dark:       #134426;
+  --green:            #27874c;
+  --green-light:      #76ca97;
+
+  --black:            #232333;
+  --grey-darkest:     #313035;
+  --grey-darker:      #4a494f;
+  --grey:             #747487;
+  --grey-light:       #babacc;
+  --grey-lighter:     #e4e4ed;
+  --grey-lightest:    #f6f7f9;
+  --white:            #ffffff;
+}
+
+/* prettier-ignore */
+@media (orientation: landscape) {
+  :root {
+    --min-height:     540px;
+    --min-width:      540px;
+  }
+}

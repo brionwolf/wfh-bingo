@@ -1,40 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6CYP8V4HRN"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-6CYP8V4HRN"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
 
-    gtag('config', 'G-6CYP8V4HRN');
-  </script>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#000000" />
+      gtag('config', 'G-6CYP8V4HRN');
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#000000" />
 
-  <title>Work From Home Bingo</title>
-  <meta name="description" content="A React powered bingoCard generator, inspired by our new video conference based way of work/life" />
+    <title>Work From Home Bingo</title>
+    <meta
+      name="description"
+      content="A React powered bingoCard generator, inspired by our new video conference based way of work/life"
+    />
 
-  <!-- Social -->
-  <meta property="og:title" content="Work From Home Bingo">
-  <meta property="og:description" content="A React powered bingoCard generator, inspired by our new video conference based way of work/life">
-  <meta property="og:image" content="/touch-icon-512.png">
-  <meta property="og:url" content="https://wfh-bingo.vercel.app/">
-  <meta name="twitter:card" content="app">
-  <meta property="og:site_name" content="Work From Home Bingo">
-  <meta name="twitter:image:alt" content="Work From Home Bingo">
+    <!-- Social -->
+    <meta property="og:title" content="Work From Home Bingo" />
+    <meta
+      property="og:description"
+      content="A React powered bingoCard generator, inspired by our new video conference based way of work/life"
+    />
+    <meta property="og:image" content="/touch-icon-512.png" />
+    <meta property="og:url" content="https://wfh-bingo.vercel.app/" />
+    <meta name="twitter:card" content="app" />
+    <meta property="og:site_name" content="Work From Home Bingo" />
+    <meta name="twitter:image:alt" content="Work From Home Bingo" />
 
-  <link rel="shortcut icon" href="/favicon.ico" />
-  <link rel="apple-touch-icon" href="/touch-icon-128.png" />
-  <link rel="apple-touch-icon" sizes="256x256" href="/touch-icon-256.png" />
-  <link rel="apple-touch-icon" sizes="512x512" href="/touch-icon-512.png" />
-  <link rel="manifest" href="/manifest.json" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/touch-icon-128.png" />
+    <link rel="apple-touch-icon" sizes="256x256" href="/touch-icon-256.png" />
+    <link rel="apple-touch-icon" sizes="512x512" href="/touch-icon-512.png" />
+    <link rel="manifest" href="/manifest.json" />
 
-</head>
-<body>
-  <div id="root"></div>
-</body>
+    <style>
+      body {
+        background-color: #232333;
+      }
 
+      #root,
+      header,
+      main,
+      footer {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
 </html>

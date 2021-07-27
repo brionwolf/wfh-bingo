@@ -7,19 +7,16 @@ export default function BingoSquare(props) {
   };
 
   return (
-    <a
-      className="bingo-square"
+    <button
+      className="card-square"
       data-freespace={props.isFreespace}
       id={props.index}
       data-index={props.index}
       href="#"
       onClick={handleClick}
-      role="button"
       aria-pressed={props.isPressed}
     >
-      <div className="bingo-square-body">
-        <div className="bingo-square-content">{props.text}</div>
-      </div>
-    </a>
+      <span className="card-square-content">{props.text}</span>
+    </button>
   );
 }

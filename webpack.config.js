@@ -1,22 +1,26 @@
 const path = require('path');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
-const CopyPlugin = require('copy-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = (env) => {
+  const devMode = env && env.NODE_ENV ? env.NODE_ENV : 'none';
+
+  const entryPoints = path.join(__dirname, 'src', 'index.js');
+
+  const stats = 'minimal';
+
   const module = {
     rules: [
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-        },
+        use: ['babel-loader'],
       },
       {
-        test: /\.s[ac]ss$/i,
+        test: /\.css$/i,
         exclude: /node_modules/,
         include: [path.resolve(__dirname, 'src/styles')],
-        use: ['style-loader', 'css-loader', 'sass-loader'],
+        use: ['style-loader', 'css-loader', 'postcss-loader'],
       },
     ],
   };
@@ -25,19 +29,20 @@ module.exports = (env) => {
     new HTMLWebpackPlugin({
       template: './public/index.html',
     }),
-    new CopyPlugin({
+    new CopyWebpackPlugin({
       patterns: [{ from: './static', to: './' }],
     }),
   ];
 
   return {
-    entry: path.join(__dirname, 'src', 'index.js'),
-    output: {
-      filename: 'bundle.js',
-      path: path.resolve(__dirname, './build'),
-    },
+    mode: devMode,
+    entry: entryPoints,
+    stats: stats,
     module: module,
-    stats: 'minimal',
     plugins: plugins,
+    output: {
+      path: path.resolve(__dirname, './build'),
+      filename: 'bundle.js',
+    },
   };
 };

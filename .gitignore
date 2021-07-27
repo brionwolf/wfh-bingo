@@ -1,4 +1,6 @@
-// .gitnignore
+# .gitnignore
+
+test.*
 
 # webpack/babel build folder
 build/

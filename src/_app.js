@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import './styles/main.scss';
-import NavMain from './components/nav-main.js';
+import './styles/main.css';
+import Header from './components/header.js';
 import Footer from './components/footer.js';
 import BingoCard from './components/bingo-card.js';
 import Alerts from './components/alerts.js';
@@ -153,7 +153,7 @@ const App = () => {
       <a href="#0" data-role="skip-link" className="sr-only">
         Skip to Bingo Card
       </a>
-      <NavMain
+      <Header
         freeSpace={freeSpace}
         freeSpaceLoc={freeSpaceLoc}
         menu={menu}

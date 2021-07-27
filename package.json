@@ -6,8 +6,9 @@
   "private": true,
   "scripts": {
     "test": "echo 'test script run'",
-    "start": "webpack-dev-server --mode development --hot",
-    "build:prod": "webpack --mode production",
+    "serve": "./node_modules/.bin/webpack-dev-server --env NODE_ENV=development --hot",
+    "start": "./node_modules/.bin/webpack -w --env NODE_ENV=development",
+    "build:prod": "./node_modules/.bin/webpack --mode production",
     "clean:build": "rm -rf ./build/*",
     "deploy:dreamhost": "scp ./build/* dreamhost:maxescher/wfhbingo"
   },
@@ -20,6 +21,7 @@
     "@fortawesome/free-regular-svg-icons": "^5.14.0",
     "@fortawesome/free-solid-svg-icons": "^5.14.0",
     "@fortawesome/react-fontawesome": "^0.1.11",
+    "postcss": "^8.3.6",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   },
@@ -31,12 +33,33 @@
     "copy-webpack-plugin": "^6.1.1",
     "css-loader": "^4.3.0",
     "html-webpack-plugin": "^4.5.0",
+    "postcss-custom-media": "^8.0.0",
+    "postcss-import": "^14.0.2",
+    "postcss-loader": "^4.2",
+    "postcss-nesting": "^8.0.1",
+    "postcss-preset-env": "^6.7.0",
     "prettier": "^2.2.1",
-    "sass": "^1.26.11",
-    "sass-loader": "^10.0.2",
     "style-loader": "^1.2.1",
     "webpack": "^4.44.2",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0"
+  },
+  "browserslist": [
+    "Explorer 11"
+  ],
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ]
+  },
+  "postcss": {
+    "map": false,
+    "plugins": {
+      "postcss-import": {},
+      "postcss-preset-env": {
+        "stage": 0
+      }
+    }
   }
 }

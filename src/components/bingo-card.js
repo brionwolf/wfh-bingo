@@ -1,5 +1,5 @@
 import React from 'react';
-import BingoSquare from '../components/bingo-square.js';
+import BingoSquare from './bingo-card-square.js';
 import { randomSpace } from '../utils/helpers';
 
 export default function BingoCard(props) {
@@ -36,10 +36,8 @@ export default function BingoCard(props) {
   });
 
   return (
-    <div className="bingo-card-gutter">
-      <div className="bingo-card" aria-label="Bingo Card">
-        {bingoSquares}
-      </div>
-    </div>
+    <bingo-card aria-label="Bingo Card">
+      <div className="cards-list">{bingoSquares}</div>
+    </bingo-card>
   );
 }

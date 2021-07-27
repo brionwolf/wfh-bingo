@@ -1,0 +1,21 @@
+bingo-card {
+  display: block;
+  position: relative;
+  margin: 0 auto;
+
+  height: 100vw;
+  min-height: var(--min-height);
+  max-height: 80vh;
+  padding: 20px;
+  width: 100vw;
+  min-width: var(--min-width);
+  max-width: 80vh;
+
+  & .cards-list {
+    column-gap: 1px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto;
+    row-gap: 1px;
+  }
+}

@@ -1,0 +1,36 @@
+/* Screen Reader Only
+------------------------ */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* Skip Link
+------------------------ */
+
+.sr-only[data-role='skip-link'] {
+  background: var(--black);
+  color: var(--white);
+  outline: 2px solid var(--orange-lighter);
+}
+
+.sr-only[data-role='skip-link']:active,
+.sr-only[data-role='skip-link']:focus {
+  color: var(--white);
+  display: block;
+  font-weight: bold;
+  height: auto;
+  padding: 5px 10px;
+  position: relative;
+  outline: 2px solid var(--orange-lighter);
+  overflow: visible;
+  text-align: left;
+  text-decoration: none;
+  width: 100%;
+}
