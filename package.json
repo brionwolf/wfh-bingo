@@ -5,15 +5,13 @@
   "main": "index.js",
   "private": true,
   "scripts": {
-    "test": "echo 'test script run'",
-    "serve": "./node_modules/.bin/webpack-dev-server --env NODE_ENV=development --hot",
-    "start": "./node_modules/.bin/webpack -w --env NODE_ENV=development",
     "build:prod": "./node_modules/.bin/webpack --mode production",
-    "clean:build": "rm -rf ./build/*",
-    "deploy:dreamhost": "scp ./build/* dreamhost:maxescher/wfhbingo"
+    "cleanup": "rm -rf ./build/*",
+    "deploy": "yarn build:prod && scp ./build/* dreamhost:maxescher/wfhbingo",
+    "serve": "./node_modules/.bin/webpack-dev-server --env NODE_ENV=development --hot",
+    "start": "./node_modules/.bin/webpack -w --env NODE_ENV=development"
   },
-  "keywords": [],
-  "author": "",
+  "author": "Max Escher <max@maxescher.com>",
   "license": "ISC",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.30",
@@ -32,6 +30,7 @@
     "babel-loader": "^8.1.0",
     "copy-webpack-plugin": "^6.1.1",
     "css-loader": "^4.3.0",
+    "css-minimizer-webpack-plugin": "^3.4.1",
     "html-webpack-plugin": "^4.5.0",
     "postcss-custom-media": "^8.0.0",
     "postcss-import": "^14.0.2",
@@ -40,6 +39,7 @@
     "postcss-preset-env": "^6.7.0",
     "prettier": "^2.2.1",
     "style-loader": "^1.2.1",
+    "terser-webpack-plugin": "^5.3.1",
     "webpack": "^4.44.2",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0"

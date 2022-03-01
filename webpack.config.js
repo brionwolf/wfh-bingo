@@ -1,11 +1,16 @@
 const path = require('path');
-const HTMLWebpackPlugin = require('html-webpack-plugin');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const HTMLWebpackPlugin = require('html-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = (env) => {
   const devMode = env && env.NODE_ENV ? env.NODE_ENV : 'none';
+  const devtool = devMode === 'production' ? 'nosources-source-map' : 'eval';
+  const isProduction = devMode === 'production';
+  const optimization = {};
 
-  const entryPoints = path.join(__dirname, 'src', 'index.js');
+  const entry = { main: path.resolve(__dirname, 'src/index.js') };
 
   const stats = 'minimal';
 
@@ -34,15 +39,31 @@ module.exports = (env) => {
     }),
   ];
 
+  const output = {
+    path: path.resolve(__dirname, './build'),
+    filename: 'bundle.js',
+  };
+
+  if (isProduction) {
+    optimization.minimize = true;
+    optimization.minimizer = [
+      new TerserPlugin({
+        parallel: true,
+        extractComments: false,
+      }),
+      new CssMinimizerPlugin({
+        parallel: true,
+      }),
+    ];
+  }
+
   return {
     mode: devMode,
-    entry: entryPoints,
+    devtool: devtool,
+    entry: entry,
     stats: stats,
     module: module,
     plugins: plugins,
-    output: {
-      path: path.resolve(__dirname, './build'),
-      filename: 'bundle.js',
-    },
+    output: output,
   };
 };
