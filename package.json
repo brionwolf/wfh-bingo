@@ -5,9 +5,9 @@
   "main": "index.js",
   "private": true,
   "scripts": {
-    "build:prod": "./node_modules/.bin/webpack --mode production",
+    "build:prod": "./node_modules/.bin/webpack --mode production --env NODE_ENV=production",
     "cleanup": "rm -rf ./build/*",
-    "deploy": "yarn build:prod && scp ./build/* dreamhost:maxescher/wfhbingo",
+    "deploy": "yarn build:prod && scp ./build/* dreamhost:maxescher/craft/web/bingo",
     "serve": "./node_modules/.bin/webpack-dev-server --env NODE_ENV=development --hot",
     "start": "./node_modules/.bin/webpack -w --env NODE_ENV=development"
   },
