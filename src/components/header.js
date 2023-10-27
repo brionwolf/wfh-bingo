@@ -56,7 +56,7 @@ export default function NavMain(props) {
           </a>
         </h1>
 
-        <nav-container>
+        <nav-container ref={mainNavRef}>
           <button
             className="menu-button"
             aria-label="Menu Button"
@@ -68,11 +68,7 @@ export default function NavMain(props) {
             <span aria-hidden="true"></span>
           </button>
 
-          <nav
-            aria-label="Main Navigation"
-            ref={mainNavRef}
-            aria-hidden={!props.menu}
-          >
+          <nav aria-label="Main Navigation" aria-hidden={!props.menu}>
             <button
               className="nav-item"
               href="#"

@@ -8,12 +8,16 @@ button.card-square {
   height: 0;
   position: relative;
   padding-bottom: 100%;
-  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  transition:
+    background-color 0.3s ease-in-out,
+    color 0.3s ease-in-out,
+    z-index 0.3s ease-in-out;
   width: 100%;
 
   &:hover,
   &:focus {
     background-color: var(--grey-darkest);
+    z-index: 9;
   }
 
   &:active {

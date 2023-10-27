@@ -6,14 +6,13 @@ import BingoCard from './components/bingo-card.js';
 import Alerts from './components/alerts.js';
 import data from '../data/data.json';
 import { shuffle, randomSpace } from './utils/helpers';
-import { faFileSignature } from '@fortawesome/free-solid-svg-icons';
 
 const root = document.getElementById('root');
 
 const App = () => {
   const [squares, setSquares] = useState(data);
   const [alertsList, setAlertsList] = useState([]);
-  const [winState, setWinState] = useState(false);
+  const [win, setWin] = useState(false);
   const [menu, setMenu] = useState(false);
   const [freeSpace, setFreeSpace] = useState(true);
   const [freeSpaceLoc, setFreeSpaceLoc] = useState(12);
@@ -29,7 +28,7 @@ const App = () => {
   }, [squares]);
 
   useEffect(() => {
-    if (winState) {
+    if (win) {
       setAlertsList((alertsList) =>
         alertsList.concat({
           type: 'success',
@@ -39,7 +38,7 @@ const App = () => {
         }),
       );
     }
-  }, [winState]);
+  }, [win]);
 
   const checkWinner = (squares) => {
     const winMatrix = [
@@ -66,7 +65,7 @@ const App = () => {
         squares[d].isPressed &&
         squares[e].isPressed
       ) {
-        return setWinState((winState) => (winState = true));
+        return setWin((win) => (win = true));
       }
     }
 
@@ -76,8 +75,8 @@ const App = () => {
   const handleNewBoard = () => {
     setSquares((squares) => shuffle(squares));
 
-    if (winState) {
-      setWinState((winState) => (winState = false));
+    if (win) {
+      setWin((win) => (win = false));
     }
 
     if (alertsList.length > 0) {
@@ -93,8 +92,8 @@ const App = () => {
       }),
     );
 
-    if (winState) {
-      setWinState((winState) => (winState = false));
+    if (win) {
+      setWin((win) => (win = false));
     }
 
     if (alertsList.length > 0) {
