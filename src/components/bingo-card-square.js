@@ -10,6 +10,7 @@ export default function BingoSquare(props) {
     <button
       className="card-square"
       data-freespace={props.isFreespace}
+      data-win={props.isWin}
       id={props.index}
       data-index={props.index}
       href="#"

@@ -46,6 +46,15 @@ button.card-square {
     }
   }
 
+  &[data-win='true'] {
+    background-color: var(--green);
+
+    &:hover,
+    &:focus {
+      background-color: var(--green-dark);
+    }
+  }
+
   & .card-square-content {
     font-family: var(--serif);
     font-size: 0.5em;

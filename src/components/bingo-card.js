@@ -12,24 +12,26 @@ export default function BingoCard(props) {
       // Make the center square a free space
       return (
         <BingoSquare
-          key={item.pk}
-          index={i}
-          id={item.pk}
           handleClick={handleClick}
+          id={item.pk}
+          index={i}
           isFreespace={props.freeSpace}
-          text="Free Space"
           isPressed={item.isPressed}
+          isWin={item.isWin}
+          key={item.pk}
+          text="Free Space"
         />
       );
     } else {
       return (
         <BingoSquare
-          key={item.pk}
-          index={i}
-          id={item.pk}
           handleClick={handleClick}
-          text={item.text}
+          id={item.pk}
+          index={i}
           isPressed={item.isPressed}
+          isWin={item.isWin}
+          key={item.pk}
+          text={item.text}
         />
       );
     }

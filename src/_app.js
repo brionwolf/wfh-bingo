@@ -56,38 +56,44 @@ const App = () => {
       [4, 8, 12, 16, 20],
     ];
 
-    for (let i = 0; i < winMatrix.length; i++) {
-      const [a, b, c, d, e] = winMatrix[i];
-      if (
+    let winningSequence = [];
+
+    winMatrix.forEach((sequence, i) => {
+      const [a, b, c, d, e] = sequence;
+
+      const isWinningSequence =
         squares[a].isPressed &&
         squares[b].isPressed &&
         squares[c].isPressed &&
         squares[d].isPressed &&
-        squares[e].isPressed
-      ) {
+        squares[e].isPressed;
+
+      if (isWinningSequence) {
+        squares[a].isWin = true;
+        squares[b].isWin = true;
+        squares[c].isWin = true;
+        squares[d].isWin = true;
+        squares[e].isWin = true;
+
         return setWin((win) => (win = true));
       }
-    }
+    });
 
     return null;
   };
 
   const handleNewBoard = () => {
+    handleResetBoard();
+
     setSquares((squares) => shuffle(squares));
-
-    if (win) {
-      setWin((win) => (win = false));
-    }
-
-    if (alertsList.length > 0) {
-      setAlertsList((alertsList) => (alertsList = []));
-    }
   };
 
   const handleResetBoard = () => {
     setSquares((squares) =>
       squares.map((square) => {
         square.isPressed = false;
+        square.isWin = false;
+
         return square;
       }),
     );
